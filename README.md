@@ -8,8 +8,10 @@ services:
         container_name: name
         restart: always
         environment:
-            - PUID=1000 #如果遇到目录可编辑，不能新增文件，改成0
-            - PGID=10 #如果遇到目录可编辑，不能新增文件，改成0
+            - PUID=1000 
+            - PGID=10 
+            #- USER_ID=0
+            #- GROUP_ID=0
             - TZ=Asia/Shanghai 
         ports:
             - "3000:3000" 
